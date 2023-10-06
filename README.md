@@ -26,13 +26,13 @@ Running tests have a problem: working directory has to be set for tests.
 ### Run unit tests
 
 ```shell
-python -m unittest discover -s ./test/info/setmy
+python -m unittest discover -s ./test
 ```
 
 ### Run integration tests
 
 ```shell
-python -m unittest discover -s ./test/info/setmy -p it_*.py
+python -m unittest discover -s ./test -p it_*.py
 ```
 
 ### Run behave (Cucumber) integration tests
@@ -44,7 +44,7 @@ behave
 ### All tests
 
 ```shell
-python -m unittest discover -s ./test/info/setmy && python -m unittest discover -s ./test/info/setmy -p it_*.py && behave
+python -m unittest discover -s ./test && python -m unittest discover -s ./test -p it_*.py && behave
 ```
 
 ## Deploy

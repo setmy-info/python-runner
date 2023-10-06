@@ -3,6 +3,9 @@ import unittest
 
 class TestExampleFoo(unittest.TestCase):
 
+    def setUp(self):
+        pass
+
     def test_example(self):
         self.assertEqual(True, True)
 
