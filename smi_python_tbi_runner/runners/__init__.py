@@ -1,4 +1,4 @@
-__all__ = ["DEFAULT_RUNNER"]
+__all__ = ["DEFAULT_RUNNER", "BaseRunner"]
 
 from runners.base_runner import BaseRunner
 
