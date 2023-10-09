@@ -19,8 +19,13 @@ class ITExample(unittest.TestCase):
             '--runner-command', 'runner-x',
             '--sub-command', 'sub-x',
             '--tbi-file', './test/resources/tbi-376bdfaa-1195-11ee-be56-0242ac120002.yaml']
-        runner_register_service.register(RunnerX())
-        main(args)
+        result_collection = {'app': None, 'tbi_file': None, 'sub_command': None}
+        runner_register_service.register(RunnerX(result_collection))
+        result_code = main(args)
+        self.assertEqual(result_code, 321)
+        self.assertEqual(result_collection['sub_command'], 'sub-x')
+        self.assertEqual(result_collection['app'].profiles_list, ['profile1', 'profile2'])
+        self.assertEqual(result_collection['tbi_file'].get_name(), 'TBI name')
 
 
 if __name__ == '__main__':
