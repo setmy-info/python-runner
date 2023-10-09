@@ -51,3 +51,16 @@ twine upload dist/*
 ```shell
 python setup.py sdist bdist_wheel && twine upload dist/*
 ```
+
+## Usage
+
+```python
+import sys
+from smi_python_tbi_runner.runner_application import main
+from smi_python_tbi_runner.services.runner_register_service import runner_register_service
+from your_code.runner_x import RunnerX
+
+if __name__ == "__main__":
+    runner_register_service.register(RunnerX())
+    sys.exit(main(sys.argv))
+```
