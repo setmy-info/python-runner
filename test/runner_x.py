@@ -15,4 +15,5 @@ class RunnerX:
         self.result_collection['app'] = app;
         self.result_collection['tbi_file'] = tbi;
         self.result_collection['sub_command'] = sub_command;
+        self.result_collection['example'] = app.arguments.example;
         return 321
