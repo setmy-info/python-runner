@@ -10,8 +10,8 @@ class BaseRunner:
     def get_name(self):
         return self.name
 
-    def execute(self, app: Application, tbi: Tbi):
-        pass
+    def execute(self, app: Application, tbi: Tbi, sub_command: str):
+        return 0
 
 
 DEFAULT_RUNNER = BaseRunner()

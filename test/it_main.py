@@ -17,6 +17,7 @@ class ITExample(unittest.TestCase):
             '--smi-config-paths', './test/resources',
             '--smi-optional-config-files', './test/resources/cli/optional.yaml',
             '--runner-command', 'runner-x',
+            '--sub-command', 'sub-x',
             '--tbi-file', './test/resources/tbi-376bdfaa-1195-11ee-be56-0242ac120002.yaml']
         runner_register_service.register(RunnerX())
         main(args)

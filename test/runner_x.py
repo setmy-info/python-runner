@@ -5,10 +5,10 @@ from smi_python_tbi_parser.tbi import Tbi
 class RunnerX:
 
     def __init__(self):
-        pass
+        self.name = "runner-x"
 
     def get_name(self):
-        return "runner-x"
+        return self.name
 
-    def execute(self, app: Application, tbi: Tbi):
-        pass
+    def execute(self, app: Application, tbi: Tbi, sub_command: str):
+        return 0
