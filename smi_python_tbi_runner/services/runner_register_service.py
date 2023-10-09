@@ -1,4 +1,4 @@
-from runners import DEFAULT_RUNNER, BaseRunner
+from smi_python_tbi_runner.runners.base_runner import BaseRunner, DEFAULT_RUNNER
 
 
 class RunnerRegisterService:
@@ -11,3 +11,6 @@ class RunnerRegisterService:
 
     def get_runner(self, sub_command: str):
         return self.instances.get(sub_command, DEFAULT_RUNNER)
+
+
+runner_register_service = RunnerRegisterService()

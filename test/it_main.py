@@ -1,8 +1,8 @@
 import unittest
 
-from runner_application import main
-from runner_x import RunnerX
-from services import runner_register_service
+from smi_python_tbi_runner.runner_application import main
+from smi_python_tbi_runner.services.runner_register_service import runner_register_service
+from test.runner_x import RunnerX
 
 
 class ITExample(unittest.TestCase):

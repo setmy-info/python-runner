@@ -5,10 +5,13 @@ from smi_python_tbi_parser.tbi import Tbi
 class BaseRunner:
 
     def __init__(self):
-        pass
+        self.name = "default"
 
     def get_name(self):
-        return "default"
+        return self.name
 
     def execute(self, app: Application, tbi: Tbi):
         pass
+
+
+DEFAULT_RUNNER = BaseRunner()

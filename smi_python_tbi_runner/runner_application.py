@@ -5,7 +5,7 @@ from smi_python_commons.arguments.constants import SMI_PROFILES_ARGUMENT, SMI_CO
 from smi_python_commons.config.application import Application
 from smi_python_tbi_parser.tbi import parse_tbi
 
-from services import runner_register_service
+from smi_python_tbi_runner.services.runner_register_service import runner_register_service
 
 
 def main(argv):
