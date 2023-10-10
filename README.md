@@ -58,6 +58,11 @@ git tag -a 0.1.0 -m "0.1.0"
 git push --tags
 ```
 
+## Release
+
+1. Update version info
+2. Deploy
+
 ```shell
 python setup.py sdist bdist_wheel && twine upload dist/*
 ```
