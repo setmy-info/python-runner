@@ -41,11 +41,21 @@ python -m unittest discover -s ./test -p it_*.py
 python -m unittest discover -s ./test && python -m unittest discover -s ./test -p it_*.py
 ```
 
+### Update version info
+
+```shell
+python git_version.py
+git add ./smi_python_tbi_runner/project.py
+git commit -m "project.py updated"
+```
+
 ## Deploy
 
 ```shell
 python setup.py sdist bdist_wheel
 twine upload dist/*
+git tag -a 1.2.3 -m "1.2.3"
+git push --tags
 ```
 
 ```shell
