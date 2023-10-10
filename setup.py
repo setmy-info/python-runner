@@ -1,8 +1,10 @@
 from setuptools import setup, find_packages
 
+from smi_python_tbi_runner.project import NAME, VERSION
+
 setup(
-    name='smi_python_tbi_runner',
-    version='0.1.0',
+    name=NAME,
+    version=VERSION,
     description='setmy.info Python TBI runner library.',
     long_description='setmy.info Python TBI runner library.',
     author='Imre Tabur',

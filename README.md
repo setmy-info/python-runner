@@ -51,19 +51,3 @@ twine upload dist/*
 ```shell
 python setup.py sdist bdist_wheel && twine upload dist/*
 ```
-
-## Usage
-
-```python
-import sys
-from smi_python_commons.arguments.argument import Argument
-from smi_python_tbi_runner.runner_application import main
-from smi_python_tbi_runner.services.runner_register_service import runner_register_service
-from smi_python_tbi_runner.services.arguments_register_service import arguments_register_service
-from your_code.runner_x import RunnerX
-
-if __name__ == "__main__":
-    arguments_register_service.register(Argument('example', 'e', str, 'Example', True))
-    runner_register_service.register(RunnerX())
-    sys.exit(main(sys.argv))
-```
