@@ -66,3 +66,21 @@ git push --tags
 ```shell
 python setup.py sdist bdist_wheel && twine upload dist/*
 ```
+
+## Usage
+
+**register.py**
+
+```python
+from smi_python_commons.arguments.argument import Argument
+
+from smi_python_tbi_runner.services.arguments_register_service import arguments_register_service
+from smi_python_tbi_runner.services.runner_register_service import runner_register_service
+from test.empty_runner import EmptyRunner
+
+
+def register():
+    arguments_register_service.register(Argument('example', 'e', str, 'Example', True))
+    empty_runner = EmptyRunner()
+    runner_register_service.register(empty_runner)
+```
