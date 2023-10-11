@@ -44,7 +44,7 @@ python -m unittest discover -s ./test && python -m unittest discover -s ./test -
 ### Update version info
 
 ```shell
-python git_version.py
+python scm_version.py
 git add ./smi_python_tbi_runner/project.py
 git commit -m "project.py updated"
 ```
@@ -54,7 +54,7 @@ git commit -m "project.py updated"
 ```shell
 python setup.py sdist bdist_wheel
 twine upload dist/*
-git tag -a 0.3.0 -m "0.3.0"
+git tag -a 0.4.0 -m "0.4.0"
 git push --tags
 ```
 
@@ -69,7 +69,7 @@ python setup.py sdist bdist_wheel && twine upload dist/*
 
 ## Usage
 
-**register.py**
+**application.py**
 
 ```python
 from smi_python_commons.arguments.argument import Argument
