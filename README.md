@@ -1,6 +1,6 @@
-# python-tbi-runner
+# python-runner
 
-Training Backlog Item file parser
+Python environment setup and runner execution.
 
 ## Development
 
