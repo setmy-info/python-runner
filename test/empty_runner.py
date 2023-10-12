@@ -1,5 +1,4 @@
 from smi_python_commons.config.application import Application
-from smi_python_tbi_parser.tbi import Tbi
 
 
 class EmptyRunner:

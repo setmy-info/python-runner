@@ -22,7 +22,7 @@ def main(argv):
         Argument('sub-command', 's', str, 'TBI sub-command', True)
     ]
     arguments_config.extend(arguments_register_service.arguments)
-    argv_config = Config('TBI runner', arguments_config)
+    argv_config = Config('Runner', arguments_config)
     app = logging_setup(Application(argv, argv_config))
     runner = runner_register_service.get_runner(app.arguments.runner_command)
     log.info("Profiles: " + str(app.profiles_list))
