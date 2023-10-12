@@ -51,11 +51,11 @@ python -m unittest discover -s ./test && python -m unittest discover -s ./test -
 
 ```shell
 # Win
-set NAME=smi_python_tbi_runner
-set VERSION=0.5.0
+set NAME=smi_python_runner
+set VERSION=1.0.0
 # *nix
-NAME=smi_python_tbi_runner
-VERSION=0.5.0
+NAME=smi_python_runner
+VERSION=1.0.0
 # Win
 python -m smi_python_commons.scm_version %NAME% %VERSION%
 # *nix
@@ -90,8 +90,8 @@ python setup.py sdist bdist_wheel && twine upload dist/*
 ```python
 from smi_python_commons.arguments.argument import Argument
 
-from smi_python_tbi_runner.services.arguments_register_service import arguments_register_service
-from smi_python_tbi_runner.services.runner_register_service import runner_register_service
+from smi_python_runner.services.arguments_register_service import arguments_register_service
+from smi_python_runner.services.runner_register_service import runner_register_service
 from test.empty_runner import EmptyRunner
 
 

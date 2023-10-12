@@ -1,7 +1,7 @@
 import importlib
 import sys
 
-from smi_python_tbi_runner.runner_application import main
+from smi_python_runner.runner_application import main
 
 if __name__ == "__main__":
     module_name = "register"

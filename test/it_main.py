@@ -2,9 +2,9 @@ import unittest
 
 from smi_python_commons.arguments.argument import Argument
 
-from smi_python_tbi_runner.runner_application import main
-from smi_python_tbi_runner.services.arguments_register_service import arguments_register_service
-from smi_python_tbi_runner.services.runner_register_service import runner_register_service
+from smi_python_runner.runner_application import main
+from smi_python_runner.services.arguments_register_service import arguments_register_service
+from smi_python_runner.services.runner_register_service import runner_register_service
 from test.runner_x import RunnerX
 
 
@@ -31,7 +31,7 @@ class ITExample(unittest.TestCase):
         self.assertEqual(result_collection['sub_command'], 'sub-x')
         self.assertEqual(result_collection['app'].profiles_list, ['profile1', 'profile2'])
         self.assertEqual(result_collection['example'], 'Example command line option')
-        self.assertEqual(result_collection['name'], 'smi_python_tbi_runner CLI')
+        self.assertEqual(result_collection['name'], 'smi_python_runner CLI')
 
 
 if __name__ == '__main__':

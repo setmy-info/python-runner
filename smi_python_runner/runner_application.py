@@ -6,9 +6,9 @@ from smi_python_commons.arguments.constants import SMI_PROFILES_ARGUMENT, SMI_CO
     SMI_OPTIONAL_CONFIG_FILES_ARGUMENT
 from smi_python_commons.config.application import Application
 
-from smi_python_tbi_runner.logging.setup import logging_setup
-from smi_python_tbi_runner.services.arguments_register_service import arguments_register_service
-from smi_python_tbi_runner.services.runner_register_service import runner_register_service
+from smi_python_runner.logging.setup import logging_setup
+from smi_python_runner.services.arguments_register_service import arguments_register_service
+from smi_python_runner.services.runner_register_service import runner_register_service
 
 log = logging.getLogger(__name__)
 

@@ -1,5 +1,5 @@
 application:
-    name: "smi_python_tbi_runner"
+    name: "smi_python_runner"
 name: Something
 a:
     b:

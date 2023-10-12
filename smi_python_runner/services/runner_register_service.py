@@ -1,4 +1,4 @@
-from smi_python_tbi_runner.runners.application_base_runner import ApplicationBaseRunner, DEFAULT_RUNNER
+from smi_python_runner.runners.application_base_runner import ApplicationBaseRunner, DEFAULT_RUNNER
 
 
 class RunnerRegisterService:

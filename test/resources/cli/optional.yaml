@@ -1,5 +1,5 @@
 application:
-    name: "smi_python_tbi_runner CLI"
+    name: "smi_python_runner CLI"
 name: Optional
 a:
     b:

@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from smi_python_tbi_runner.project import NAME, VERSION
+from smi_python_runner.project import NAME, VERSION
 
 setup(
     name=NAME,
