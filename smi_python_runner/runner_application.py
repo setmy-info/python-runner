@@ -1,5 +1,6 @@
 import logging
 
+import smi_python_commons.environment.variables
 from smi_python_commons.arguments.argument import Argument
 from smi_python_commons.arguments.config import Config
 from smi_python_commons.arguments.constants import SMI_PROFILES_ARGUMENT, SMI_CONFIG_PATHS_ARGUMENT, \
@@ -47,4 +48,9 @@ def get_module_name_from_app(app: Application):
 
 
 def get_module_name(runner_command: str, sub_command: str):
-    return "runners." + runner_command + "_" + sub_command
+    prefix = smi_python_commons.environment.variables.get_environment_variable("RUNNERS_PREFIX")
+    if prefix is not None:
+        prefix = prefix + "."
+    else:
+        prefix = ""
+    return prefix + "runners." + runner_command + "_" + sub_command
