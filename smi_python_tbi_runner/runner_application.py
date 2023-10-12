@@ -5,7 +5,6 @@ from smi_python_commons.arguments.config import Config
 from smi_python_commons.arguments.constants import SMI_PROFILES_ARGUMENT, SMI_CONFIG_PATHS_ARGUMENT, \
     SMI_OPTIONAL_CONFIG_FILES_ARGUMENT
 from smi_python_commons.config.application import Application
-from smi_python_tbi_parser.tbi import parse_tbi
 
 from smi_python_tbi_runner.logging.setup import logging_setup
 from smi_python_tbi_runner.services.arguments_register_service import arguments_register_service
@@ -20,13 +19,13 @@ def main(argv):
         SMI_CONFIG_PATHS_ARGUMENT,
         SMI_OPTIONAL_CONFIG_FILES_ARGUMENT,
         Argument('runner-command', 'r', str, 'Runner to be executed', True),
-        Argument('tbi-file', 't', str, 'TBI yaml to be used', True),
         Argument('sub-command', 's', str, 'TBI sub-command', True)
     ]
     arguments_config.extend(arguments_register_service.arguments)
     argv_config = Config('TBI runner', arguments_config)
-    app = Application(argv, argv_config)
+    app = logging_setup(Application(argv, argv_config))
     runner = runner_register_service.get_runner(app.arguments.runner_command)
-    tbi = parse_tbi(app.arguments.tbi_file)
-    logging_setup(app)
-    return runner.execute(app, tbi, app.arguments.sub_command)
+    log.info("Profiles: " + str(app.profiles_list))
+    log.info("Runner: " + str(app.arguments.runner_command))
+    log.info("Sub-command: " + str(app.arguments.sub_command))
+    return runner.execute(app, app.arguments.sub_command)

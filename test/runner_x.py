@@ -11,9 +11,10 @@ class RunnerX:
     def get_name(self):
         return self.name
 
-    def execute(self, app: Application, tbi: Tbi, sub_command: str):
+    def execute(self, app: Application, sub_command: str):
         self.result_collection['app'] = app;
-        self.result_collection['tbi_file'] = tbi;
+        self.result_collection['tbi_file'] = app.arguments.tbi_file;
         self.result_collection['sub_command'] = sub_command;
         self.result_collection['example'] = app.arguments.example;
+        self.result_collection['name'] = app.name;
         return 321

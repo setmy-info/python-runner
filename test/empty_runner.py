@@ -10,5 +10,5 @@ class EmptyRunner:
     def get_name(self):
         return self.name
 
-    def execute(self, app: Application, tbi: Tbi, sub_command: str):
+    def execute(self, app: Application, sub_command: str):
         return 0

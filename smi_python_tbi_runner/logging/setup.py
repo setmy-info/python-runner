@@ -23,3 +23,4 @@ def logging_setup(application):
     log = logging.getLogger()
     log.addHandler(handler)
     '''
+    return application

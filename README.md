@@ -7,8 +7,14 @@ Training Backlog Item file parser
 ### Preparations
 
 ```shell
+# Win
 py -3.9 -m venv ./.venv
+# *nix
+python -m venv ./.venv
+# Win
 .\.venv\Scripts\activate
+# *nix
+source ./.venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
@@ -46,10 +52,10 @@ python -m unittest discover -s ./test && python -m unittest discover -s ./test -
 ```shell
 # Win
 set NAME=smi_python_tbi_runner
-set VERSION=0.3.0
+set VERSION=0.5.0
 # *nix
 NAME=smi_python_tbi_runner
-VERSION=0.3.0
+VERSION=0.5.0
 # Win
 python -m smi_python_commons.scm_version %NAME% %VERSION%
 # *nix

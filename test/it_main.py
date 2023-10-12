@@ -7,6 +7,8 @@ from smi_python_tbi_runner.services.arguments_register_service import arguments_
 from smi_python_tbi_runner.services.runner_register_service import runner_register_service
 from test.runner_x import RunnerX
 
+from smi_python_tbi_parser.tbi import parse_tbi
+
 
 class ITExample(unittest.TestCase):
 
@@ -26,6 +28,7 @@ class ITExample(unittest.TestCase):
         ]
         result_collection = {'app': None, 'tbi_file': None, 'sub_command': None, 'example': None}
         arguments_register_service.register(Argument('example', 'e', str, 'Example', True))
+        arguments_register_service.register(Argument('tbi-file', 't', parse_tbi, 'TBI yaml to be used', True), )
         runner_register_service.register(RunnerX(result_collection))
         result_code = main(args)
         self.assertEqual(result_code, 321)
@@ -33,6 +36,7 @@ class ITExample(unittest.TestCase):
         self.assertEqual(result_collection['app'].profiles_list, ['profile1', 'profile2'])
         self.assertEqual(result_collection['tbi_file'].get_name(), 'TBI name')
         self.assertEqual(result_collection['example'], 'Example command line option')
+        self.assertEqual(result_collection['name'], 'smi_python_tbi_runner CLI')
 
 
 if __name__ == '__main__':
