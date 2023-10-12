@@ -2,7 +2,7 @@ from smi_python_commons.config.application import Application
 from smi_python_tbi_parser.tbi import Tbi
 
 
-class BaseRunner:
+class ApplicationBaseRunner:
 
     def __init__(self):
         self.name = "default"
@@ -14,4 +14,4 @@ class BaseRunner:
         return 0
 
 
-DEFAULT_RUNNER = BaseRunner()
+DEFAULT_RUNNER = ApplicationBaseRunner()

@@ -79,7 +79,7 @@ python setup.py sdist bdist_wheel && twine upload dist/*
 
 ## Usage
 
-**register.py**
+**application.py**
 
 ```python
 from smi_python_commons.arguments.argument import Argument
