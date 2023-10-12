@@ -1,4 +1,4 @@
-smi-python-tbi-parser==0.3.2
+smi-python-commons==0.3.3
 behave==1.2.6
 wheel==0.41.2
 twine==4.0.2

@@ -13,6 +13,6 @@ setup(
     url='https://github.com/setmy-info/python-tbi-runner',
     packages=find_packages(),
     install_requires=[
-        "smi-python-tbi-parser==0.3.2"
+        "smi-python-commons==0.3.3"
     ],
 )
