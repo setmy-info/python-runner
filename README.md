@@ -44,9 +44,19 @@ python -m unittest discover -s ./test && python -m unittest discover -s ./test -
 ### Update version info
 
 ```shell
-python git_version.py
-git add ./smi_python_tbi_runner/project.py
+# Win
+set NAME=smi_python_tbi_runner
+set VERSION=0.3.0
+# *nix
+NAME=smi_python_tbi_runner
+VERSION=0.3.0
+# Win
+python -m smi_python_commons.scm_version %NAME% %VERSION%
+# *nix
+python -m smi_python_commons.scm_version ${NAME} ${VERSION}
+git add ./${NAME}/project.py
 git commit -m "project.py updated"
+git push
 ```
 
 ## Deploy
@@ -54,7 +64,7 @@ git commit -m "project.py updated"
 ```shell
 python setup.py sdist bdist_wheel
 twine upload dist/*
-git tag -a 0.3.0 -m "0.3.0"
+git tag -a ${VERSION} -m "${VERSION}"
 git push --tags
 ```
 
