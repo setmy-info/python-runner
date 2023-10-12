@@ -44,13 +44,13 @@ def trying_to_load_module_by_app(app: Application):
 
 
 def get_module_name_from_app(app: Application):
-    return get_module_name(app.arguments.runner_command, app.arguments.sub_command)
+    return get_module_name(app.arguments.runner_command)
 
 
-def get_module_name(runner_command: str, sub_command: str):
+def get_module_name(runner_command: str):
     prefix = smi_python_commons.environment.variables.get_environment_variable("RUNNERS_PREFIX")
     if prefix is not None:
         prefix = prefix + "."
     else:
         prefix = ""
-    return prefix + "runners." + runner_command + "_" + sub_command
+    return prefix + "runners." + runner_command
