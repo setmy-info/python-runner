@@ -52,10 +52,10 @@ python -m unittest discover -s ./test && python -m unittest discover -s ./test -
 ```shell
 # Win
 set NAME=smi_python_runner
-set VERSION=1.0.0
+set VERSION=1.1.0
 # *nix
 NAME=smi_python_runner
-VERSION=1.0.0
+VERSION=1.1.0
 # Win
 python -m smi_python_commons.scm_version %NAME% %VERSION%
 # *nix
