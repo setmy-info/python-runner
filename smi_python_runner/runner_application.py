@@ -47,4 +47,4 @@ def get_module_name_from_app(app: Application):
 
 
 def get_module_name(runner_command: str, sub_command: str):
-    return runner_command + "_" + sub_command
+    return "runners." + runner_command + "_" + sub_command
