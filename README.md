@@ -118,3 +118,34 @@ class EmptyRunner:
     def execute(self, app: Application, sub_command: str):
         return 0
 ```
+
+**runner-x_sub-x.py**
+
+```python
+import logging
+
+from smi_python_commons.config.application import Application
+
+from smi_python_runner.services.runner_register_service import runner_register_service
+
+log = logging.getLogger(__name__)
+
+logging.info("Loaded module")
+
+
+class RunnerAbc:
+
+    def __init__(self):
+        self.name = "runner-abc"
+
+    def get_name(self):
+        return self.name
+
+    def execute(self, app: Application, sub_command: str):
+        return 0
+
+
+def init():
+    logging.info("Init module")
+    runner_register_service.register(RunnerAbc())
+```

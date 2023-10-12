@@ -13,5 +13,4 @@ def load_module(module_name: str, function_name: str = None):
                 func()
         return loaded_module
     except ImportError as e:
-        log.error(f"Couldn't load module: {module_name}")
         raise e
