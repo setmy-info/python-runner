@@ -13,6 +13,6 @@ setup(
     url='https://github.com/setmy-info/python-runner',
     packages=find_packages(),
     install_requires=[
-        "smi-python-commons==0.3.3"
+        "smi-python-commons==0.4.0"
     ],
 )
