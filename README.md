@@ -53,6 +53,31 @@ python -m unittest discover -s ./test -p it_*.py
 python -m unittest discover -s ./test && python -m unittest discover -s ./test -p it_*.py
 ```
 
+### Security Checks
+
+The project uses popular Python security tools to ensure dependency safety and code quality.
+
+#### Dependency Vulnerability Check (`pip-audit`)
+
+This tool checks installed packages against known vulnerability databases (PyPI Advisory Database). It is the Python
+equivalent of Java's dependency check.
+
+**Run check:**
+
+```sh
+pip-audit -r requirements.txt
+```
+
+#### Static Analysis Security Testing (`bandit`)
+
+Bandit is a tool designed to find common security issues in Python code.
+
+**Run check:**
+
+```sh
+bandit -r smi_python_runner
+```
+
 ### Update version info
 
 ```shell
@@ -87,7 +112,7 @@ can be:
 | `name`                     | `NAME` from `project.py`                          | Package name on PyPI                    |
 | `version`                  | `VERSION` from `project.py`                       | Package version                         |
 | `packages=find_packages()` | auto-detected                                     | Includes all sub-packages               |
-| `install_requires`         | `smi-python-commons==0.4.0`                       | Runtime dependency                      |
+| `install_requires`         | `smi-python-commons`                              | Runtime dependency                      |
 | `extras_require[dev]`      | `bandit`, `behave`, `pip_audit`, `wheel`, `twine` | Dev/build tools (from requirements.txt) |
 
 ### How to use it
