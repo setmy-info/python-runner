@@ -1,3 +1,3 @@
 NAME = "smi_python_runner"
 VERSION = "1.4.0"
-HASH = "b209e64bafdbec49ef953e69bdd75d5fa48c1aa0"
+HASH = "7fb5243452dbbcd305554a3aa658c6aef7645317"
