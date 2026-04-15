@@ -15,4 +15,13 @@ setup(
     install_requires=[
         "smi-python-commons==0.4.0"
     ],
+    extras_require={
+        "dev": [
+            "bandit==1.8.6",
+            "behave==1.3.3",
+            "pip_audit==2.9.0",
+            "wheel==0.46.3",
+            "twine==6.2.0",
+        ]
+    },
 )

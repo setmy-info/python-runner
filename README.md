@@ -23,6 +23,12 @@ For developing depending on the project / module, dependency can be added into *
 
     python-commons @ file:///C:/sources/setmy.info/submodules/python-commons
 
+## Upgrade
+
+```shell
+pip install --upgrade behave wheel twine pip_audit bandit
+```
+
 ### PyCharm
 
 "File" -> "Settings" -> Python Integrated Tools -> Default test runner: Unittest
@@ -67,7 +73,8 @@ git push
 
 ## setup.py
 
-`setup.py` is the **package distribution configuration** file. It makes this project an installable Python package that can be:
+`setup.py` is the **package distribution configuration** file. It makes this project an installable Python package that
+can be:
 
 - Built into a distributable artifact (`.whl` / `.tar.gz`)
 - Installed locally via `pip install .`
@@ -75,12 +82,13 @@ git push
 
 ### What each part does
 
-| Field | Value | Meaning |
-|---|---|---|
-| `name` | `NAME` from `project.py` | Package name on PyPI |
-| `version` | `VERSION` from `project.py` | Package version |
-| `packages=find_packages()` | auto-detected | Includes all sub-packages |
-| `install_requires` | `smi-python-commons==0.4.0` | Declares a dependency |
+| Field                      | Value                                             | Meaning                                 |
+|----------------------------|---------------------------------------------------|-----------------------------------------|
+| `name`                     | `NAME` from `project.py`                          | Package name on PyPI                    |
+| `version`                  | `VERSION` from `project.py`                       | Package version                         |
+| `packages=find_packages()` | auto-detected                                     | Includes all sub-packages               |
+| `install_requires`         | `smi-python-commons==0.4.0`                       | Runtime dependency                      |
+| `extras_require[dev]`      | `bandit`, `behave`, `pip_audit`, `wheel`, `twine` | Dev/build tools (from requirements.txt) |
 
 ### How to use it
 
@@ -96,6 +104,12 @@ pip install build && python -m build
 
 ```shell
 pip install -e .
+```
+
+**Install locally with dev dependencies:**
+
+```shell
+pip install -e .[dev]
 ```
 
 **Install normally:**
