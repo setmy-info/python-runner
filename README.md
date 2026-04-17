@@ -2,6 +2,17 @@
 
 Python environment setup and runner execution.
 
+### Overview
+
+`python-runner` is a framework for building modular command-line applications. It provides a structured way to execute different tasks (called "runners") while sharing a common infrastructure for:
+
+- **Configuration Management:** Unified handling of application profiles and YAML/JSON configuration files.
+- **Argument Parsing:** A centralized registry for command-line arguments.
+- **Logging:** Pre-configured logging setup.
+- **Dynamic Module Loading:** Runners and arguments can be registered and loaded dynamically based on command-line inputs.
+
+This modularity makes it useful for projects that require multiple related scripts or tools to be bundled into a single entry point with consistent behavior and environment setup.
+
 ## Development
 
 ### Preparations
